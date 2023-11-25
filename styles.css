@@ -1,0 +1,160 @@
+.catprendas {
+    background: #05e3be;
+    color: #ea0ecc;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #da0abe;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+    .catcocina {
+    background: #0ad81f;
+    color: #1230f4;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid rgb(238, 13, 148);
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+    .catfarmaceutico {
+    background: #49de09;
+    color: #0f2cec;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #0bbce8;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    }
+    .catjugueteria {
+    background: #c25304;
+    color: #29de0d;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #c512d2;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;
+    display: inline-block;
+    
+    }
+    .catmascotas
+    {
+    background: #fb131b6b;
+    color: rgb(13, 204, 204);
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #0827ef;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;   
+    display: inline-block;
+    }
+    .catautomovilstico {
+    background: #f7f7068c;
+    color: #a8cf09;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #0828f6;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;  
+    display: inline-block;
+    
+    }
+    .catvestimenta {
+    background: #0937f0;
+    color: #10eb1f;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid rgb(10, 40, 237);
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;  
+    display: inline-block;
+    
+    }
+    .cattelefonia {
+        background: #4180f7;
+        color: #05157d;
+        font-weight: bold;
+        padding: 15px;
+        border: 2px solid rgb(25, 52, 227);
+        border-radius: 6px;
+        text-align:center;
+        width: 90%;
+        margin: 20px;   
+        display: inline-block;
+    
+    }
+    .catdeportes {
+    background: #eaf603;
+    color: #96217f;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #633253;
+    border-radius: 6px;
+    text-align:center;
+    width: 90%;
+    margin: 20px;  
+    display: inline-block;
+    display: inline-block;
+    
+    
+    }
+    .soon 
+    {
+        background: #deea07;
+    color: #670962;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid #522a48;
+    border-radius: 6px;
+    text-align:center;
+    width: 97%;
+    margin: 20px; 
+    display: inline-block;
+    
+    }
+    /* colores para tabla */
+    .catprendas {
+         font-weight: bold; padding: 15px; border-left:20px solid #09071f;
+    }
+    .pantalones {
+         font-weight: bold; padding: 15px; border-left:20px solid #4d34bd;
+    }
+    .chompas {
+        font-weight: bold; padding: 15px; border-left:20px solid #620337;
+    }
+    .mascotas {
+        font-weight: bold; padding: 15px; border-left:20px solid #faf20c6b; 
+    }
+    .jugueteria {
+        font-weight: bold; padding: 15px; border-left:20px solid #12e142;
+    }
+    .automovilstico {
+        font-weight: bold; padding: 15px; border-left:20px solid #0f25b68c;
+    }
+    .vestimenta {
+        font-weight: bold; padding: 15px; border-left:20px solid #031d86;
+    }
+    .telefonia {
+        font-weight: bold; padding: 15px; border-left:20px solid rgb(45, 224, 244);
+    }
+    .deportes {
+        font-weight: bold; padding: 15px; border-left:20px solid #e8770d;
+    }

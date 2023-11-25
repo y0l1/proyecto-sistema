@@ -8,7 +8,7 @@
         <div class="container mt-5">
 <div class="row">
 <div class="col-sm-12 mb-3">
-<center><h1>DISTRIBUIDOR DE PRENDAS</h1></center>
+<center><h1>PRENDAS</h1></center>
 <a href="producto_agregar.php"><input  class="btn btn-primary" type="button" value="Agregar producto"></a>
 </div>
 <div class="col-sm-12">
@@ -23,7 +23,9 @@
 <th>Nombre</th>
 <th>Descripcion</th>
 <th>Color</th>
+<th>Precio</th>
 <th>Cantidad</th>
+<th>Cantidad minima</th>
 <th>Categorias</th>
 <th>Imagen</th>
 <th>Acciones</th>
@@ -37,7 +39,7 @@
 
 <?php
 
-$sql = "SELECT * FROM productos";
+$sql = "SELECT * FROM productos where cantidad <= cantidad_min";
 $productos = mysqli_query($conexion, $sql);
 if($productos -> num_rows > 0){
 foreach($productos as $key => $row ){
@@ -58,7 +60,7 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
 <style>
       .problema{
         background-color: <?php echo $color?>;
-        color: blue;
+        color: #000000;
     }
 </style>
 <!-- empieza la tabla-->
@@ -67,10 +69,12 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
 <td><?php echo $row['nombre']; ?></td>
 <td><?php echo $row['descripcion']; ?></td>
 <td><?php echo $row['color']; ?></td>
+<td><?php echo $row['precio']; ?>$</td>
 
 
 
 <td <?php echo  'class="'.$clase .'"'; ?>><?php echo $row['cantidad']; ?></td>
+<td><?php echo $row['cantidad_min']; ?></td>
 
 
 <td><?php echo $row['categorias']; ?></td>
@@ -121,27 +125,4 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
         </section>
     </div>
     <?php require '../../includes/_footer.php' ?>
-</html>
-<HTml>
-  <Head>
-    <style>
-      table.table.table-striped.table-hover{
-        color: #030a56;
-        background-color: #e89e9e;
-        border: #030a56;
-      }
-      h1{
-        color: blueviolet;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      }
-      a{
-        color: #030a56;
-      }
-      td{
-        color: blueviolet;
-      }
-    </style>
-  </Head>
-</HTml>
-
-
+</html

@@ -2,13 +2,14 @@
 <html lang="en">
 <?php require '../../includes/_db.php' ?>
 <?php require '../../includes/_header.php' ?>
+<body>
 
 <div id= "content">
         <section>
         <div class="container mt-5">
 <div class="row">
 <div class="col-sm-12 mb-3">
-<center><h1>DISTRIBUIDOR DE PRENDAS</h1></center>
+<center><h1> DISTRIBUIDOR DE PRENDAS</h1></center>
 <a href="producto_agregar.php"><input  class="btn btn-primary" type="button" value="Agregar producto"></a>
 </div>
 <div class="col-sm-12">
@@ -23,7 +24,9 @@
 <th>Nombre</th>
 <th>Descripcion</th>
 <th>Color</th>
+<th>Precio</th>
 <th>Cantidad</th>
+<th>Cantidad minima</th>
 <th>Categorias</th>
 <th>Imagen</th>
 <th>Acciones</th>
@@ -36,13 +39,17 @@
 <tbody>
 
 <?php
-
-$sql = "SELECT * FROM productos";
+$categoria = $_GET['categoria'];
+extract($_POST);
+$sql = "SELECT * FROM productos WHERE categorias = '$categoria'";
 $productos = mysqli_query($conexion, $sql);
 if($productos -> num_rows > 0){
 foreach($productos as $key => $row ){
+
+
+
+
 ?>
-<!--funcion y estilos para celdas en error-->
 <?php
 
 if ($row['cantidad'] <= $row['cantidad_min']) {
@@ -58,21 +65,18 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
 <style>
       .problema{
         background-color: <?php echo $color?>;
-        color: blue;
+        color: #000000;
     }
 </style>
-<!-- empieza la tabla-->
+
 <tr>
 <td <?php echo  'class="'.$row['categorias'] .'"'; ?>><?php echo $row['id']; ?></td>
 <td><?php echo $row['nombre']; ?></td>
 <td><?php echo $row['descripcion']; ?></td>
 <td><?php echo $row['color']; ?></td>
-
-
-
+<td><?php echo $row['precio']; ?></td>
 <td <?php echo  'class="'.$clase .'"'; ?>><?php echo $row['cantidad']; ?></td>
-
-
+<td><?php echo $row['cantidad_min']; ?></td>
 <td><?php echo $row['categorias']; ?></td>
 <td><img width="100" src="data:image;base64,<?php echo base64_encode($row['imagen']);  ?>" ></td>
 
@@ -122,26 +126,25 @@ if ($row['cantidad'] <= $row['cantidad_min']) {
     </div>
     <?php require '../../includes/_footer.php' ?>
 </html>
-<HTml>
-  <Head>
+<html>
+  <head>
     <style>
-      table.table.table-striped.table-hover{
-        color: #030a56;
-        background-color: #e89e9e;
-        border: #030a56;
+      .table.table-striped{
+        color: blue;
+        background-color: pink;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       }
-      h1{
+      .h1{
         color: blueviolet;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: blue;
       }
-      a{
-        color: #030a56;
+      input.btn.btn-primary{
+        color: purple;
+        background-color: #c1e8a9;
+        border: -5px;
       }
-      td{
-        color: blueviolet;
-      }
+    
+      
     </style>
-  </Head>
-</HTml>
-
-
+  </head>
+</html>
